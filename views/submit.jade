@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    form(action="/submit", method="post")
+        input(name= "name" , type="text" , placeholder="Name")
+        input(name="URL" , type="text" , placeholder="Youtube URL")
+        input(name="title" , type="text" , placeholder="Title")
+        input(name="description" , type="text" , placeholder="Description")
+        input(type="submit")
+
