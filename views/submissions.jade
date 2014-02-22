@@ -1,4 +1,17 @@
-extens layout
+extends layout
 
 block content
-	h1= submissions[0].toString()
+
+  for item in submissions
+
+    h1= item.title
+
+  
+    p= item.description 
+    p Submitted by #{item.name}
+
+    p 
+      iframe(width="560", height="315", src="//www.youtube.com/embed/" + item.URL.substring(25) ,frameborder="0", allowfullscreen)
+    br
+    a(href='/vote/#{item.id}') Click here to vote for #{item.title}
+    p Current votes #{item.votes}

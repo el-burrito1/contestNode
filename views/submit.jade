@@ -2,9 +2,12 @@ extends layout
 
 block content
     form(action="/submit", method="post")
-        input(name= "name" , type="text" , placeholder="Name")
-        input(name="URL" , type="text" , placeholder="Youtube URL")
-        input(name="title" , type="text" , placeholder="Title")
-        input(name="description" , type="text" , placeholder="Description")
+        input(name= "name" , type="text" , placeholder="Name" value="Spencer")
+        input(name="URL" , type="text" , placeholder="Youtube URL" value="http://www.youtube.com/watch?v=Ykpt6zpPnpI")
+        input(name="title" , type="text" , placeholder="Title" value="Lost Interest")
+        input(name="description" , type="text" , placeholder="Description" value="Awesome video from Dane Reynolds")
         input(type="submit")
+    br
+    a(href='/submissions') Click here to view submissions
+
 

@@ -26,11 +26,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.post('/submit' , submitController.getInfo);
+app.get('/', submitController.formView);
+app.post('/submit', submitController.submit);
 
-app.get('/submit', submitController.submit);
-
-
+app.get('/submissions' , submitController.viewAll);
+app.get('/vote/:id' , submitController.updateVote);
 
 
 http.createServer(app).listen(app.get('port'), function(){
