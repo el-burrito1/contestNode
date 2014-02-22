@@ -1,17 +1,22 @@
 extends layout
 
 block content
+  div.banner
+    h1 Check out the vids and vote for your favorites!
+    a.links(href='/viewresults') Click here to view results
 
   for item in submissions
 
-    h1= item.title
+    h1.submitClass= item.title
+  
+    p.submitClass= item.description 
+    p.nameClass Submitted by #{item.name}
+    p.vidAlign 
+      iframe(width="560", height="315", src="//www.youtube.com/embed/" + item.URL.substring(31) ,frameborder="0", allowfullscreen)
+    a.voteClass(href='/vote/#{item.id}') Click here to vote for #{item.title}
+    p.voteClass Current votes #{item.votes}
 
   
-    p= item.description 
-    p Submitted by #{item.name}
+ 
 
-    p 
-      iframe(width="560", height="315", src="//www.youtube.com/embed/" + item.URL.substring(25) ,frameborder="0", allowfullscreen)
-    br
-    a(href='/vote/#{item.id}') Click here to vote for #{item.title}
-    p Current votes #{item.votes}
+

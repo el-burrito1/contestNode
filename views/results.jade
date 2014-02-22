@@ -1,0 +1,7 @@
+extends layout
+
+block content
+
+  for item in submissions
+    h1= item.title
+    p Current votes: #{item.votes}

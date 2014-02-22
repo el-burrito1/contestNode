@@ -1,12 +1,16 @@
 extends layout
 
 block content
+    h1 Surf video contest!
+    h3 Submit a video below, then click through to see other videos and vote on your favorites!
+    br
     form(action="/submit", method="post")
-        input(name= "name" , type="text" , placeholder="Name" value="Spencer")
-        input(name="URL" , type="text" , placeholder="Youtube URL" value="http://www.youtube.com/watch?v=Ykpt6zpPnpI")
-        input(name="title" , type="text" , placeholder="Title" value="Lost Interest")
-        input(name="description" , type="text" , placeholder="Description" value="Awesome video from Dane Reynolds")
+        input(name= "name" , type="text" , placeholder="Your Name")
+        input(name="URL" , type="text" , placeholder="Youtube URL")
+        input(name="title" , type="text" , placeholder="Title")
+        input(name="description" , type="text" , placeholder="Description" size=35)
         input(type="submit")
+    br
     br
     a(href='/submissions') Click here to view submissions
 

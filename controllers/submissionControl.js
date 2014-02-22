@@ -18,19 +18,22 @@ module.exports = {
 	},
 
 	viewAll: function(req,res){
-		if(submissionModel.length>8){
-			res.render('full.jade',{});
-		} else {
 			res.render('submissions.jade',{
 				submissions:submissionModel.submissions,
 		})
-		}
 	},
 
 	updateVote: function(req,res){
 		var voteID = req.params.id;
 		submissionModel.submissions[voteID].votes += 1;
 		res.redirect('/submissions');
+	},
+
+	results: function(req,res){
+		console.log(submissionModel.submissions)
+			res.render('results.jade',{
+				submissions:submissionModel.submissions,
+		});
 	}
 
 }

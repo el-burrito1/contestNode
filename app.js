@@ -31,6 +31,7 @@ app.post('/submit', submitController.submit);
 
 app.get('/submissions' , submitController.viewAll);
 app.get('/vote/:id' , submitController.updateVote);
+app.get('/viewResults' , submitController.results)
 
 
 http.createServer(app).listen(app.get('port'), function(){

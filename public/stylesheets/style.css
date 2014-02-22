@@ -6,3 +6,32 @@ body {
 a {
   color: #00B7FF;
 }
+
+.banner{
+	background-color:#CD853F;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.submitClass{
+	padding-left:240px;
+}
+
+.vidAlign{
+	padding-left:240px;
+}
+
+.voteClass{
+	padding-left:600px;
+}
+
+.nameClass{
+	padding-left:275px;
+	font-style: italic;
+	color:gray;
+}
+
+.links{
+	color:#FFFFFF;
+	padding-left:45px;
+}
