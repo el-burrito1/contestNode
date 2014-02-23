@@ -1,4 +1,4 @@
-var submissionModel = require('../models/submissionModel.js');
+var submissionModel = require('../Models/submissionModel.js');
 
 
 
